@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Detail – Dark Template</title>
+  <link rel="stylesheet" href="product-style.css" />
+
+  <meta name="description" content="Dark product detail template with image gallery, rating, price and features for mini e-commerce or affiliate offers." />
+</head>
+<body class="dark-body">
+  <header class="dark-header">
+    <div class="dark-container">
+      <p class="dark-kicker">Product detail template</p>
+      <h1>Product Name Goes Here</h1>
+      <p class="dark-subtitle">
+        Replace this page with your own product copy, images, pricing and call‑to‑action buttons.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section class="product-section">
+      <div class="dark-container product-layout">
+        <!-- Left: gallery -->
+        <div class="product-gallery">
+          <div class="product-main-image">
+            <img id="mainImage" src="product-1a.jpg" alt="Product main view">
+          </div>
+          <div class="product-thumbs">
+            <img src="product-1a.jpg" alt="Angle 1" class="thumb active" onclick="swapImage(this)">
+            <img src="product-1b.jpg" alt="Angle 2" class="thumb" onclick="swapImage(this)">
+            <img src="product-1c.jpg" alt="Angle 3" class="thumb" onclick="swapImage(this)">
+            <img src="product-1d.jpg" alt="Angle 4" class="thumb" onclick="swapImage(this)">
+          </div>
+        </div>
+
+        <!-- Right: info -->
+        <div class="product-info">
+          <h2>Short Product Title</h2>
+
+          <div class="product-rating-row">
+            <span class="product-rating-stars">★★★★★</span>
+            <span class="product-rating-text">4.9 / 5 (128 reviews)</span>
+          </div>
+
+          <div class="product-price-row">
+            <div class="product-price-block">
+              <span class="price-current">$13.78</span>
+              <span class="price-old">$15.99</span>
+              <span class="price-badge">14% OFF</span>
+            </div>
+            <p class="product-badge-note">Free shipping · 3–7 business days</p>
+          </div>
+
+          <p class="product-lead">
+            Use this paragraph to highlight the main benefit: comfort, quality, material or unique feature that makes this product stand out.
+          </p>
+
+          <ul class="product-features">
+            <li>Key feature one describing material, sizing or main benefit.</li>
+            <li>Key feature two such as shipping, warranty or guarantee.</li>
+            <li>Key feature three about use cases or ideal customer.</li>
+          </ul>
+
+          <div class="product-actions">
+            <a href="#" class="dark-btn-primary large">Buy Now</a>
+            <a href="index.html" class="dark-btn-ghost">Back to Products</a>
+          </div>
+
+          <div class="product-extra">
+            <h3>More Details</h3>
+            <p>
+              Add additional details about sizing, materials, care instructions, or what is included in the package. Keep it short and easy to scan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="dark-footer">
+    <div class="dark-container">
+      <p>&copy; 2025 YourBrand. Product detail template.</p>
+    </div>
+  </footer>
+
+  <script>
+    function swapImage(thumb) {
+      const main = document.getElementById('mainImage');
+      main.src = thumb.src;
+
+      document
+        .querySelectorAll('.product-thumbs .thumb')
+        .forEach(img => img.classList.remove('active'));
+
+      thumb.classList.add('active');
+    }
+  </script>
+</body>
+</html>
 
